@@ -1,5 +1,9 @@
 ## CloudFlare queues
 
+This repository contains a sample project to demonstrate how to use CloudFlare queues.
+
+The CloudFlare *wrangler* CLI is used to create the queue and the workers. The workers are created locally in two separate folders and then published to CloudFlare.
+
 ### Prerequisites
 
 - Install [Node.js](https://nodejs.org/en/download/)
@@ -25,6 +29,8 @@
    2. Use TypeScript: `Y`
    3. Create worker: `Fetch handler`
    4. Write tests: `N`
+
+   A new folder named *producer* will be created which contains the worker.
 
 2. Update the *producer/src/index.ts* file with:
 
@@ -77,6 +83,8 @@ export default {
    2. Use TypeScript: `Y`
    3. Create worker: `Fetch handler`
    4. Write tests: `N`
+
+   A new folder named *consumer* will be created which contains the worker.
 
 2. Update the *consumer/src/index.ts* file to:
 
