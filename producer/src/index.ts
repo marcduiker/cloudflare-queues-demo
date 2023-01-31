@@ -20,6 +20,6 @@ export default {
 	): Promise<Response> {
 		let message = Math.random();
 		await env.QUEUE_BINDING.send(message);
-		return new Response("Succes!");
+		return new Response("Success!");
 	},
 };
