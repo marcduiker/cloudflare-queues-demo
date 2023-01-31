@@ -3,5 +3,5 @@ main = "src/index.ts"
 compatibility_date = "2023-01-30"
 
 [[queues.producers]]
- queue = "dapr-messages" 
+ queue = "my-messages" 
  binding = "QUEUE_BINDING"

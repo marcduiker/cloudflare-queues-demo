@@ -21,6 +21,8 @@ The CloudFlare *wrangler* CLI is used to create the queue and the workers. The w
 
 ### Create a producer worker
 
+You can either create a new *producer* worker by following steps 1-3, or use the existing *producer* worker in this repository and continue from step 4.
+
 1. In the root folder, create a worker to produce messages:
 
     `wrangler init producer`
@@ -66,16 +68,17 @@ export default {
 
    `wrangler publish`
 
-5. Trigger the *producer* endpoint:
+5. Optional: Call the *producer* endpoint:
 
    `curl https://producer.<your-worker>.workers.dev`
 
-6. There should be one message in the queue backlog.
-
+   There should be one message in the queue backlog.
 
 ### Create a consumer worker
 
-1. In the root folder, create a worker to produce messages:
+You can either create a new *consumer* worker by following steps 1-3, or use the existing *consumer* worker in this repository and continue from step 4.
+
+1. In the root folder, create a worker to consume messages:
 
     `wrangler init consumer`
 
@@ -118,7 +121,7 @@ export default {
 
    `wrangler tail --format=json`
 
-6. Start the *producer* worker to send messages to the queue:
+6. Call the *producer* worker to send messages to the queue:
 
    `curl https://producer.<your-worker>.workers.dev`
 
